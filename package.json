@@ -1,0 +1,22 @@
+{
+  "name": "catenergy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altergold/CatEnergy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/altergold/CatEnergy/issues"
+  },
+  "homepage": "https://github.com/altergold/CatEnergy#readme",
+  "devDependencies": {
+    "gulp-less": "^4.0.1"
+  }
+}
