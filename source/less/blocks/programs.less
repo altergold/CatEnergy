@@ -1,0 +1,68 @@
+.programs {
+  .container();
+  margin-bottom: 30px;
+}
+
+.programs__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.programs__list-item {
+  position: relative;
+  background-color: @lightgrey-background-color;
+  padding: 20px;
+}
+
+.programs__list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+
+.programs__list-item-image-container {
+  position: absolute;
+  min-width: 50px;
+  min-height: 50px;
+  background-image: url("../img/m-circle.svg");
+  background-repeat: no-repeat;
+}
+
+.programs__list-item-image {
+  display: block;
+}
+.programs__list-item-image-slim {
+  margin: 0 auto;
+}
+
+.programs__program-name {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.programs__program-description {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.programs__hr {
+  margin-top: 0;
+  margin-bottom: 25px;
+  border: none;
+  color: @darkgrey-color;
+  background-color: @darkgrey-color;
+  height: 1px;
+}
+
+.programs__link-to-catalog {
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}

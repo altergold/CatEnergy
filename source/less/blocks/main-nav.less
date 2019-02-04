@@ -1,0 +1,29 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  .container();
+}
+
+.main-nav__menu-toggle {
+  border: none;
+  height: 18px;
+  width: 18px;
+  background-image: url("../img/m-close.svg");
+  background-color: transparent;
+}
+@media (min-width: @tablet) {
+
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
