@@ -12,39 +12,56 @@
 
 <header class="page-header">
 
-  <div class="page-header__wrapper">
-    <nav class="main-nav">
-      <div class="main-nav__logo-container">
-        <a class="main-nav__image-logo-link" href="">
-          <img class="main-nav__image-logo" src="img/logo-mobile.svg" width=33 height=38 alt="Cat Energy logo image">
-        </a>
-        <a class="main-nav__text-logo-link" href="">
-          <img class="main-nav__text-logo" src="img/logo-mobile-header.svg" width=101 height=18 alt="Cat Energy">
-        </a>
-        <button class="main-nav__menu-toggle"></button>
-      </div>
-      <ul class="main-nav__menu site-menu">
-        <li class="site-menu__item site-menu__item--active">
-          <a class="site-menu__link site-menu__link--active" href="">Главная</a>
-        </li>
-        <li class="site-menu__item">
-          <a class="site-menu__link" href="">Каталог продукции</a>
-        </li>
-        <li class="site-menu__item">
-          <a class="site-menu__link" href="">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <!--<div class="page-header__wrapper">-->
+  <nav class="main-nav">
+    <div class="main-nav__logo-container">
+      <a class="main-nav__image-logo-link" href="">
+        <picture class="main-nav__image-logo">
+          <source srcset="img/logo-desktop.svg" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
+          <source srcset="img/logo-mobile.svg">
+          <img src="img/logo-mobile.svg" alt="My default image">
+        </picture>
+
+      </a>
+      <a class="main-nav__text-logo-link" href="">
+        <picture class="main-nav__text-logo">
+          <source srcset="img/empty.svg" media="(min-width: 1440px)">
+          <source srcset="img/empty.svg" media="(min-width: 768px)">
+          <source srcset="img/logo-mobile-header.svg">
+          <img src="img/logo-mobile-header.svg" alt="My default image">
+        </picture>
+        <!--<img class="main-nav__text-logo" src="img/logo-mobile-header.svg" width=101 height=18 alt="Cat Energy">-->
+      </a>
+      <button class="main-nav__menu-toggle"></button>
+    </div>
+    <ul class="main-nav__menu site-menu site-menu--promo">
+      <li class="site-menu__item site-menu__item--active">
+        <a class="site-menu__link site-menu__link--active" href="">Главная</a>
+      </li>
+      <li class="site-menu__item">
+        <a class="site-menu__link" href="">Каталог продукции</a>
+      </li>
+      <li class="site-menu__item">
+        <a class="site-menu__link" href="">Подбор программы</a>
+      </li>
+    </ul>
+  </nav>
+  <!--</div>-->
 </header>
 
 
 <main class="page-main">
   <h1 class="visually-hidden">Cat energy</h1>
   <section class="promo">
-    <h2 class="promo__header">Функциональное питание для котов</h2>
+    <h2 class="promo__header">Функциональное<br>питание для котов</h2>
     <p class="promo__slogan">Занялся собой? Займись котом!</p>
-    <img class="promo__image" src="img/index-can-mobile.png" alt="">
+    <picture class="promo__image">
+      <source srcset="img/index-can.png" media="(min-width: 1440px)">
+      <source srcset="img/index-can-tablet.png" media="(min-width: 768px)">
+      <source srcset="img/index-can-mobile.png">
+      <img src="img/index-can-mobile.png" alt="My default image">
+    </picture>
     <a class="promo__button button" href="">Подобрать программу</a>
   </section>
 
@@ -53,7 +70,8 @@
     <ul class="programs__list">
       <li class="programs__list-item">
         <div class="programs__list-item-image-container">
-          <img  class="programs__list-item-image programs__list-item-image-slim" width="35" height="49" src="img/cat-slim.svg">
+          <img class="programs__list-item-image programs__list-item-image-slim"
+               src="img/cat-slim.svg">
         </div>
         <h3 class="programs__program-name">Похудение</h3>
 
@@ -63,8 +81,11 @@
         <a class="programs__link-to-catalog" href="">Каталог Slim</a>
       </li>
       <li class="programs__list-item">
+        <div class="programs__list-item-image-container">
+          <img class="programs__list-item-image programs__list-item-image-pro" width="67" height="28"
+               src="img/cat-pro.svg">
+        </div>
         <h3 class="programs__program-name">Набор массы</h3>
-        <img class="programs__list-item-image programs__list-item-image--loose-weight" src="" alt="">
         <p class="programs__program-description">Заработать авторитет среди дворовых котов и даже собак?
           Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
         <a class="programs__link-to-catalog" href="">Каталог Pro</a>
@@ -77,20 +98,24 @@
     <h2 class="how-it-works__header">Как это работает</h2>
     <ol class="how-it-works__list">
       <li class="how-it-works__list-item">
-        <img class="how-it-works__list-item-image how-it-works__list-item-image--nutritious" src="" alt="">
-        Функциональное питание содержит только полезные питательные вещества.
+        <div class="how-it-works__list-item-image how-it-works__list-item-image-nutritious"></div>
+        <p class="how-it-works__list-item-description">Функциональное питание содержит только полезные питательные
+          вещества.</p>
       </li>
       <li class="how-it-works__list-item">
-        <img class="how-it-works__list-item-image how-it-works__list-item-image--release-form" src="" alt="">
-        Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+        <div class="how-it-works__list-item-image how-it-works__list-item-image-release-form"></div>
+        <p class="how-it-works__list-item-description">Выпускается в виде порошка, который нужно лишь залить кипятком и
+          готово.</p>
       </li>
       <li class="how-it-works__list-item">
-        <img class="how-it-works__list-item-image how-it-works__list-item-image--use" src="" alt="">
-        Замените один-два приема обычной еды на наше функциональное питание.
+        <div class="how-it-works__list-item-image how-it-works__list-item-image-use"></div>
+        <p class="how-it-works__list-item-description">Замените один-два приема обычной еды на наше функциональное
+          питание.</p>
       </li>
       <li class="how-it-works__list-item">
-        <img class="how-it-works__list-item-image how-it-works__list-item-image--term" src="" alt="">
-        Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+        <div class="how-it-works__list-item-image how-it-works__list-item-image-term"></div>
+        <p class="how-it-works__list-item-description">Уже через месяц наслаждайтесь изменениями к лучшему вашего
+          питомца!</p>
       </li>
     </ol>
   </section>

@@ -3,15 +3,53 @@
   margin-bottom: 30px;
 }
 
+@media (min-width: @tablet) {
+  .programs{
+    .container(tablet);
+  }
+}
+
+@media (min-width: @desktop) {
+  .programs{
+    .container(desktop);
+  }
+}
+
 .programs__list {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: @desktop) {
+  .programs__list{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .programs__list-item {
   position: relative;
   background-color: @lightgrey-background-color;
   padding: 20px;
+}
+
+@media (min-width: @tablet) {
+  .programs__list-item {
+    box-sizing: border-box;
+    min-height: 370px;
+    padding-left: 50px;
+    padding-right: 280px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .programs__list-item {
+    box-sizing: border-box;
+    width: 570px;
+  }
 }
 
 .programs__list-item:not(:last-child) {
@@ -24,26 +62,63 @@
   min-width: 50px;
   min-height: 50px;
   background-image: url("../img/m-circle.svg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
+@media (min-width: @tablet) {
+  .programs__list-item-image-container {
+    min-width: 200px;
+    min-height: 200px;
+    right: 63px;
+    top: 95px;
+  }
+}
 .programs__list-item-image {
   display: block;
+  position:absolute;
+  max-width: none;
+  left: 25px;
+  top: 25px;
+  transform: translate(-50%, -50%);
 }
+
+@media (min-width: @tablet) {
+  .programs__list-item-image {
+    left: 100px;
+    top: 100px;
+  }
+}
+
 .programs__list-item-image-slim {
-  margin: 0 auto;
+  width: 35px;
+  height: auto;
+}
+
+@media (min-width: @tablet) {
+  .programs__list-item-image-slim {
+    width: 140px;
+    height: auto;
+  }
 }
 
 .programs__program-name {
   margin-top: 0;
+  margin-left: 70px;
   margin-bottom: 40px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 24px;
   line-height: 50px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
 }
 
+@media (min-width: 768px) {
+  .programs__program-name {
+    margin-left: 0;
+    font-size: 36px;
+  }
+}
 .programs__program-description {
   margin-top: 0;
   margin-bottom: 25px;
@@ -52,6 +127,11 @@
   line-height: 18px;
 }
 
+@media (min-width: 768px) {
+  .programs__program-description {
+    font-size: 16px;
+  }
+}
 .programs__hr {
   margin-top: 0;
   margin-bottom: 25px;
@@ -60,9 +140,32 @@
   background-color: @darkgrey-color;
   height: 1px;
 }
-
+@media (min-width: @tablet) {
+  .programs__hr {
+    display: none;
+  }
+}
 .programs__link-to-catalog {
   font-family: "Oswald", Arial, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
+  color: @black-color;
+}
+
+@media (min-width: @tablet) {
+.programs__link-to-catalog {
+  position: absolute;
+  -bottom: 0;
+  -left: 0;
+}
+}
+
+.programs__link-to-catalog::after {
+  display: inline-block;
+  position: relative;
+  left: 15px;
+  content: url("../img/arrow-long.svg");
+  width: 24px;
+  height: 11px;
+  line-height: 16px;
 }

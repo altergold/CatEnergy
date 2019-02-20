@@ -1,4 +1,9 @@
 .site-menu {
+  color: black;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
   .list-reset();
   display: flex;
   flex-direction: column;
@@ -9,6 +14,7 @@
 @media (min-width: @tablet) {
   .site-menu {
     flex-direction: row;
+    border: none;
   }
 }
 
@@ -17,19 +23,42 @@
   line-height: 65px;
   text-align: center;
 
-  color: black;
-  font-family: 'Oswald', Arial, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
+
 }
 
 .site-menu__item:not(:last-child) {
   border-bottom: solid @nav-border-color 1px;
 }
 
+@media (min-width: @tablet) {
+  .site-menu__item {
+    min-height: 18px;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: normal;
+    border: none;
+  }
+
+  .site-menu__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .site-menu__item:not(.site-menu__item--active) {
+    border-bottom: none;
+  }
+  .site-menu__item--active {
+    border-bottom: solid @nav-border-color 1px;
+  }
+}
+
 .site-menu__item a{
   color: @black-color;
+}
+
+@media (min-width: @desktop) {
+  .site-menu--promo a{
+    color: white;
+  }
 }
 
 .site-menu__item a:hover{

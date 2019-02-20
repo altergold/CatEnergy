@@ -1,4 +1,18 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
+  -display: flex;
+  -flex-direction: column;
+}
+
+@media (min-width: @tablet) {
+  .page-header {
+    .container(tablet);
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header {
+    .container(desktop);
+    padding-top: 0;
+  }
 }

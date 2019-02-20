@@ -1,6 +1,25 @@
 .main-nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: @tablet) {
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-nav {
+    position: absolute;
+    .container(desktop);
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
 }
 
 .main-nav__logo-container {
@@ -12,6 +31,13 @@
   .container();
 }
 
+@media (min-width: @tablet) {
+  .main-nav__logo-container {
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+}
 .main-nav__menu-toggle {
   border: none;
   height: 18px;
@@ -19,11 +45,12 @@
   background-image: url("../img/m-close.svg");
   background-color: transparent;
 }
+
 @media (min-width: @tablet) {
-
-  .main-nav {
-    flex-direction: row;
-    justify-content: space-between;
+  .main-nav__menu-toggle {
+    .visually-hidden();
   }
-
 }
+
+
+

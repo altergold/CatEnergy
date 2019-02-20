@@ -2,8 +2,33 @@
   background-image: url("../img/index-background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   padding-top: 30px;
   margin-bottom: 25px;
+}
+
+@media (min-width: @tablet) {
+  .promo {
+    position: relative;
+    background-image: none;
+    .container(tablet);
+    padding-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .promo {
+    position: relative;
+    background-image: url("../img/index-background-desktop.jpg");
+    background-position: right top;
+    background-origin: border-box;
+    background-size: auto;
+    min-height: 696px;
+    .container(desktop);
+    padding-top: 220px;
+    margin-bottom: 80px;
+  }
 }
 
 .promo__header {
@@ -11,14 +36,30 @@
   font-family: "Oswald", Arial, sans-serif;
   font-weight: normal;
   font-size: 36px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 35px;
   line-height: 36px;
   text-align: center;
 }
 
+@media (min-width: @tablet) {
+  .promo__header {
+    color: @black-color;
+    margin-left: 90px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop) {
+  .promo__header {
+    margin-left: 80px;
+  }
+}
+
 .promo__slogan {
-  margin-top:0px;
+  margin-top:0;
   margin-bottom: 10px;
   color: white;
   font-family: "Oswald", Arial, sans-serif;
@@ -29,13 +70,55 @@
   text-transform: uppercase;
 }
 
-.promo__image {
+@media (min-width: @tablet) {
+  .promo__slogan {
+    margin-left: 90px;
+    margin-bottom: 20px;
+    color: @black-color;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop) {
+  .promo__slogan {
+    margin-left: 80px;
+    margin-bottom: 50px;
+  }
+}
+
+.promo__image img{
   display:block;
   margin: 0 auto;
 }
 
+@media (min-width: @desktop) {
+  .promo__image {
+    position: absolute;
+    left: 560px;
+    top: 130px;
+  }
+}
 .promo__button {
   display: block;
   margin: 0 auto;
-  width:calc(100% - @mobile-padding * 2);
+  width:calc(@mobile - @mobile-padding * 2);
+}
+
+@media (min-width: @tablet) {
+  .promo__button {
+    position: absolute;
+    top: 270px;
+    left: 120px;
+    width: 245px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .promo__button {
+    position: static;
+    margin-left: 80px;
+    width: 245px;
+  }
 }
